@@ -237,7 +237,6 @@ APP_NAME=AcademicStack
 DEBUG=True
 DATABASE_URL=sqlite:///./academicstack.db
 SECRET_KEY=your_secure_random_jwt_secret_key_here
-OPENAI_API_KEY=sk-proj-your_fallback_openai_key_here
 
 # Cloudinary Storage
 CLOUDINARY_CLOUD_NAME=your_cloud_name
