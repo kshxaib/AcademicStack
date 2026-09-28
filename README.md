@@ -3,7 +3,7 @@
 > **Intelligent RAG-Grounded Exam Preparation, Blueprint Prediction & Peer Collaboration Platform for University Students**
 
 [![FastAPI](https://img.shields.io/badge/Backend-FastAPI%200.141-009688.svg?style=flat&logo=fastapi)](https://fastapi.tiangolo.com/)
-[![React](https://img.shields.io/badge/Frontend-React%2019%20%2B%20Vite%206-61DAFB.svg?style=flat&logo=react)](https://react.dev/)
+[![React](https://img.shields.io/badge/Frontend-React%2019%20%2B%20Vite%208-61DAFB.svg?style=flat&logo=react)](https://react.dev/)
 [![TailwindCSS](https://img.shields.io/badge/Styling-TailwindCSS%20v4-38B2AC.svg?style=flat&logo=tailwind-css)](https://tailwindcss.com/)
 [![Qdrant](https://img.shields.io/badge/Vector%20DB-Qdrant-DC2626.svg?style=flat&logo=qdrant)](https://qdrant.tech/)
 [![OpenAI](https://img.shields.io/badge/LLM-OpenAI%20GPT--4o%20%2F%20text--embedding--3--small-412991.svg?style=flat&logo=openai)](https://openai.com/)
@@ -16,15 +16,16 @@
 | Resource | Link | Description |
 | :--- | :--- | :--- |
 | 🌐 **Live Application** | [academicstack.kshoeb.in](https://academicstack.kshoeb.in) | Production deployment of the full web application |
-| 🎨 **Frontend Repository** | [github.com/kshxaib/as-frontend](https://github.com/kshxaib/as-frontend) | React 19, Vite 6, TailwindCSS v4, KaTeX & Zustand SPA |
+| 🎨 **Frontend Repository** | [github.com/kshxaib/as-frontend](https://github.com/kshxaib/as-frontend) | React 19, Vite 8, TailwindCSS v4, KaTeX & Zustand SPA |
 | ⚙️ **Backend Repository** | [github.com/kshxaib/as-backend](https://github.com/kshxaib/as-backend) | FastAPI, Qdrant Vector Store, Two-Stage RAG & PDF Engines |
-| 📖 **Master Technical Docs** | [PROJECT_DOCUMENTATION.md](PROJECT_DOCUMENTATION.md) | Full architectural blueprint, DB schemas & API contracts |
+| 📚 **Modular Technical Docs** | [docs/README.md](file:///d:/Shoaib/AcademicStack/docs/README.md) | Exhaustive 9-part enterprise technical documentation suite |
+| 📖 **Master Blueprint** | [PROJECT_DOCUMENTATION.md](file:///d:/Shoaib/AcademicStack/PROJECT_DOCUMENTATION.md) | Comprehensive project specification & source of truth |
 
 ---
 
 ## 🌟 Overview
 
-**AcademicStack** is an end-to-end AI study revision and exam preparation platform designed for university students, study groups, and academic batches. 
+**AcademicStack** is an end-to-end AI study revision and exam preparation platform designed for university students, study groups, and academic cohorts.
 
 Instead of manually spending weeks searching for answers across hundreds of lecture slides and solving historical exam papers with generic, hallucination-prone AI prompts, AcademicStack provides:
 
@@ -40,7 +41,7 @@ Instead of manually spending weeks searching for answers across hundreds of lect
 
 ```mermaid
 flowchart TB
-    subgraph Client [Frontend SPA — React 19 + Vite 6]
+    subgraph Client [Frontend SPA — React 19 + Vite 8]
         UI[Workspace & Landing UI]
         State[Zustand Persistent Stores]
         Render[KaTeX LaTeX + Mermaid.js Engine]
@@ -49,7 +50,7 @@ flowchart TB
 
     subgraph Server [Backend REST API — FastAPI]
         Auth[JWT Bearer & Bcrypt Auth]
-        BYOK[Dynamic BYOK LLM Router + AES-256 GCM]
+        BYOK[Fernet Symmetric AES Key Decryption]
         Controllers[API Route Controllers]
     end
 
@@ -61,7 +62,7 @@ flowchart TB
     end
 
     subgraph Storage [Persistence & Storage]
-        DB[(SQLite / PostgreSQL DB)]
+        DB[(PostgreSQL / SQLite DB)]
         Qdrant[(Qdrant Vector Database)]
         Cloudinary[(Cloudinary Document CDN)]
     end
@@ -82,21 +83,21 @@ flowchart TB
     Render --> UI
 ```
 
-### Technology Highlights
+### Verified Technology Highlights
 
 | Component | Technology | Description |
 | :--- | :--- | :--- |
-| **Frontend SPA** | React 19, Vite 6, JavaScript | Fast, interactive single-page application with responsive workspace shell |
-| **Styling** | TailwindCSS v4, CSS Custom Properties | Curated warm-paper academic design tokens with dark/light themes |
+| **Frontend SPA** | React 19, Vite 8, JavaScript | Fast, interactive single-page application with responsive workspace shell |
+| **Styling** | TailwindCSS v4, CSS Custom Properties | Curated warm-paper academic design tokens with editorial typography |
 | **State Management**| Zustand v5 (Persisted) | Atomic, multi-store state synchronization with `localStorage` cache |
 | **Math & Diagrams** | KaTeX, Mermaid.js v11, `react-markdown` | High-fidelity LaTeX math typography and vector flowcharts |
-| **Backend API** | FastAPI, Python 3.11+, Uvicorn | High-performance asynchronous RESTful backend |
-| **Database & ORM** | SQLite / PostgreSQL, SQLAlchemy ORM | Relational schema with cascade rules and foreign-key integrity |
-| **Vector Database** | Qdrant Cloud / Local Collection | Dense vector indexing for chunked study materials |
+| **Backend API** | FastAPI 0.141, Python 3.12, Uvicorn | High-performance asynchronous RESTful backend |
+| **Database & ORM** | PostgreSQL / SQLite, SQLAlchemy 2.0 | Relational schema with cascade rules and foreign-key integrity |
+| **Vector Database** | Qdrant Cloud / Local Collection | Dense vector indexing (1536 dim) for chunked study materials |
 | **LLM & Embeddings**| OpenAI GPT-4o / GPT-4o-mini / Vision | Grounded RAG synthesis, OCR transcription, and exam blueprint forecasting |
-| **PDF Generation** | ReportLab 4.4+, PyMuPDF | Custom canvas geometry, DejaVu typography, and multi-column pagination |
+| **PDF Generation** | ReportLab 5.0, PyMuPDF | Custom canvas geometry, DejaVu typography, and multi-column pagination |
 | **Cloud Storage** | Cloudinary CDN | Secure raw PDF document storage and signed streaming delivery |
-| **Security** | AES-256 GCM, PBKDF2 HMAC-SHA256, JWT | Client-side encrypted Bring-Your-Own-Key (BYOK) architecture |
+| **Security** | Fernet AES-128-CBC, Bcrypt, PyJWT | Server-side encrypted Bring-Your-Own-Key (BYOK) architecture |
 
 ---
 
@@ -125,10 +126,11 @@ AcademicStack/
 │   │   │   ├── useAuthStore.js             # User session, JWT tokens, profile state
 │   │   │   ├── useQuestionBankStore.js     # Primary data store for resources, QBs, questions, answers
 │   │   │   ├── usePracticeStore.js         # Practice mode and active answer visibility state
-│   │   │   └── useThemeStore.js            # Light/Dark mode state
-│   │   ├── App.jsx                         # Main app orchestrator & route coordinator
+│   │   │   └── useThemeStore.js            # Theme state & DOM synchronization
+│   │   ├── App.jsx                         # Main app orchestrator & tab coordinator
 │   │   └── index.css                       # Design tokens, typography & KaTeX overrides
 │   ├── package.json                        # Frontend NPM dependencies
+│   ├── vercel.json                         # Vercel SPA client rewrite rules
 │   └── vite.config.js                      # Vite build configuration
 │
 ├── as-backend/                             # FastAPI Python REST Backend
@@ -148,15 +150,26 @@ AcademicStack/
 │   │   ├── resources/                      # Study resource upload, listing & Cloudinary storage
 │   │   ├── storage/                        # Cloudinary document storage connector
 │   │   ├── users/                          # User authentication, registration & AES key encryption
-│   │   ├── utils/                          # AES-256 GCM encryption & error formatting
+│   │   ├── utils/                          # Fernet AES encryption & error formatting
 │   │   ├── vector_store/                   # Qdrant client & collection initialization
 │   │   └── main.py                         # FastAPI application entrypoint & CORS middleware
-│   ├── Dockerfile                          # Backend containerization Dockerfile
-│   ├── docker-compose.yml                  # Full stack local orchestration
+│   ├── Dockerfile                          # Backend containerization Dockerfile (Python 3.12-slim)
+│   ├── docker-compose.yml                  # Local development Postgres + Qdrant services
 │   └── requirements.txt                    # Backend Python dependencies
 │
+├── docs/                                   # Enterprise Modular Documentation Suite
+│   ├── README.md                           # Master sitemap & architecture overview
+│   ├── 01-project-overview.md              # Vision, problems solved & core pillars
+│   ├── 02-architecture-and-dataflow.md     # System topology, lifecycles & data pipelines
+│   ├── 03-backend-architecture.md          # Framework, directory breakdown & services
+│   ├── 04-frontend-architecture.md         # UI tech stack, stores, components & rendering
+│   ├── 05-api-documentation.md             # Complete 34 REST endpoints & schemas
+│   ├── 06-database-and-storage.md          # ER diagram, ORM models, Qdrant & Cloudinary
+│   ├── 07-core-features-and-logic.md       # Two-Stage RAG, blueprint predictor & PDF engines
+│   └── 08-setup-and-deployment.md          # Local runbook, Docker, Cloud & env variables
+│
 ├── PROJECT_DOCUMENTATION.md                # Comprehensive Project Specification & Source of Truth
-└── README.md                               # Project Overview & Quickstart Guide
+└── README.md                               # Project Landing & Overview
 ```
 
 ---
@@ -165,7 +178,7 @@ AcademicStack/
 
 ### Prerequisites
 - **Node.js**: v18.0.0 or higher & `npm`
-- **Python**: v3.11 or higher
+- **Python**: v3.11 or higher (3.12 recommended)
 - **OpenAI API Key** (or input your personal key via the app UI in Profile Settings)
 - **Qdrant**: Cloud cluster URL/Key or local instance (`localhost:6333`)
 - **Cloudinary Account**: Cloud Name, API Key, API Secret
@@ -189,11 +202,14 @@ source venv/bin/activate
 # 3. Install Python dependencies
 pip install -r requirements.txt
 
-# 4. Configure environment variables
-cp .env.example .env
-# Edit .env with your credentials (DATABASE_URL, SECRET_KEY, CLOUDINARY_*, QDRANT_*)
+# 4. Generate Fernet encryption key for BYOK OpenAI keys:
+python -c "from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())"
 
-# 5. Start the FastAPI development server
+# 5. Configure environment variables
+cp .env.example .env
+# Edit .env with your credentials (DATABASE_URL, JWT_SECRET, ENCRYPTION_KEY, CLOUDINARY_*, QDRANT_*)
+
+# 6. Start the FastAPI development server
 uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
 ```
 Backend API interactive documentation is available at `http://127.0.0.1:8000/docs`.
@@ -217,13 +233,13 @@ The frontend application will boot at **`http://localhost:5173`**.
 
 ---
 
-### 3. Docker Compose Setup (Alternative)
+### 3. Local Docker Services Setup (Alternative)
 
-To run the entire system via Docker:
+To quickly run PostgreSQL and Qdrant without local system installations:
 
 ```bash
 # Inside as-backend/
-docker-compose up --build
+docker compose up -d
 ```
 
 ---
@@ -235,8 +251,17 @@ docker-compose up --build
 ```env
 APP_NAME=AcademicStack
 DEBUG=True
-DATABASE_URL=sqlite:///./academicstack.db
-SECRET_KEY=your_secure_random_jwt_secret_key_here
+
+# Database (PostgreSQL recommended; SQLite supported)
+DATABASE_URL=postgresql://academicstack:academicstack@localhost:5432/academicstack
+
+# JWT Authentication
+JWT_SECRET=your_secure_random_jwt_secret_key_here
+JWT_ALGORITHM=HS256
+ACCESS_TOKEN_EXPIRE_MINUTES=43200
+
+# Fernet Symmetric Encryption Key for User OpenAI BYOK Keys
+ENCRYPTION_KEY=your_generated_fernet_key_base64_here
 
 # Cloudinary Storage
 CLOUDINARY_CLOUD_NAME=your_cloud_name
@@ -244,8 +269,11 @@ CLOUDINARY_API_KEY=your_api_key
 CLOUDINARY_API_SECRET=your_api_secret
 
 # Qdrant Vector Store
-QDRANT_HOST=https://your-qdrant-cluster.qdrant.tech
-QDRANT_API_KEY=your_qdrant_api_key
+QDRANT_HOST=localhost
+QDRANT_PORT=6333
+# For Qdrant Cloud:
+# QDRANT_URL=https://your-qdrant-cluster.qdrant.tech
+# QDRANT_API_KEY=your_qdrant_api_key
 
 # CORS Whitelist (Comma-separated)
 FRONTEND_URL=http://localhost:5173,http://127.0.0.1:5173
@@ -266,12 +294,12 @@ VITE_API_URL=http://127.0.0.1:8000/api
 | **Auth** | `POST` | `/api/auth/register` | Register new student account |
 | **Auth** | `POST` | `/api/auth/login` | Authenticate student & receive Bearer JWT |
 | **Auth** | `GET` | `/api/auth/me` | Fetch active profile & key status |
-| **Profile** | `PUT` | `/api/auth/profile/openai-key` | Save encrypted personal OpenAI key (AES-256) |
+| **Profile** | `PUT` | `/api/auth/profile/openai-key` | Save encrypted personal OpenAI key |
 | **Resources**| `POST` | `/api/resources` | Upload study notes/slides PDF to Cloudinary |
 | **Resources**| `POST` | `/api/resources/{id}/index` | Chunk & embed study material into Qdrant |
 | **Question Banks** | `POST` | `/api/question-banks` | Upload past exam paper PDF |
-| **Question Banks** | `POST` | `/api/question-banks/{id}/extract` | AI question extraction via GPT-4o |
-| **Answers** | `POST` | `/api/answer-sets/generate` | Generate grounded solutions via RAG |
+| **Question Banks** | `POST` | `/api/question-banks/{id}/extract` | AI question extraction via GPT-4o & Vision OCR |
+| **Answers** | `POST` | `/api/answer-sets/generate` | Generate grounded solutions via Two-Stage RAG |
 | **Answers** | `GET` | `/api/answer-sets/{id}/pdf` | Download full Solved Book PDF |
 | **Answers** | `GET` | `/api/answer-sets/{id}/cheatsheet-pdf` | Download 2-column compact Cheatsheet PDF |
 | **Answers** | `POST` | `/api/answers/{id}/retry` | Re-solve single question with custom feedback |
@@ -282,15 +310,23 @@ VITE_API_URL=http://127.0.0.1:8000/api
 | **Community** | `GET` | `/api/community/answer-sets` | Discover shared solved answer sets |
 | **Community** | `POST` | `/api/community/.../clone` | 1-Click clone shared assets into private workspace |
 
-For the complete endpoint specifications, see [PROJECT_DOCUMENTATION.md](file:///d:/Shoaib/AcademicStack/PROJECT_DOCUMENTATION.md).
+For the complete endpoint specifications, see [docs/05-api-documentation.md](file:///d:/Shoaib/AcademicStack/docs/05-api-documentation.md).
 
 ---
 
-## 📖 Complete Documentation
+## 📚 Modular Technical Documentation
 
-For comprehensive architecture details, database entity-relationship schemas, RAG prompt engineering specifications, and token design standards, refer to the source of truth document:
+For in-depth architectural guides, ER diagrams, prompt engineering specifications, and token design standards, consult the `/docs` suite:
 
-👉 **[PROJECT_DOCUMENTATION.md](file:///d:/Shoaib/AcademicStack/PROJECT_DOCUMENTATION.md)**
+- 🗺️ **[Master Sitemap & Overview](file:///d:/Shoaib/AcademicStack/docs/README.md)**
+- 🎯 **[01. Project Overview & Vision](file:///d:/Shoaib/AcademicStack/docs/01-project-overview.md)**
+- 🏛️ **[02. Architecture & Dataflow](file:///d:/Shoaib/AcademicStack/docs/02-architecture-and-dataflow.md)**
+- ⚙️ **[03. Backend Architecture](file:///d:/Shoaib/AcademicStack/docs/03-backend-architecture.md)**
+- 🎨 **[04. Frontend Architecture](file:///d:/Shoaib/AcademicStack/docs/04-frontend-architecture.md)**
+- 📡 **[05. Complete API Documentation](file:///d:/Shoaib/AcademicStack/docs/05-api-documentation.md)**
+- 🗄️ **[06. Database & Storage Architecture](file:///d:/Shoaib/AcademicStack/docs/06-database-and-storage.md)**
+- 🧠 **[07. Core Features & Algorithmic Logic](file:///d:/Shoaib/AcademicStack/docs/07-core-features-and-logic.md)**
+- 🚀 **[08. Setup, Configuration & Deployment](file:///d:/Shoaib/AcademicStack/docs/08-setup-and-deployment.md)**
 
 ---
 
